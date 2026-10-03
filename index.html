@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Block World</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="game">
+    <div id="crosshair">+</div>
+
+    <div id="instructions">
+      WASD = Move &nbsp; | &nbsp; Space = Jump &nbsp; | &nbsp;
+      Left Click = Break &nbsp; | &nbsp; Right Click = Place
+    </div>
+
+    <div id="hotbar">
+      <div class="slot selected" data-block="grass">🌱</div>
+      <div class="slot" data-block="dirt">🟫</div>
+      <div class="slot" data-block="stone">⬜</div>
+      <div class="slot" data-block="wood">🪵</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
