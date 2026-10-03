@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #87ceeb;
+}
+
+#game {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      #70c5ff 0%,
+      #b9e9ff 55%,
+      #78b84a 55%,
+      #78b84a 100%
+    );
+}
+
+/* Crosshair */
+
+#crosshair {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+
+  text-shadow:
+    1px 1px 2px black,
+    -1px -1px 2px black;
+
+  z-index: 20;
+}
+
+/* Instructions */
+
+#instructions {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 10px 16px;
+
+  color: white;
+  background: rgba(0, 0, 0, 0.45);
+
+  border-radius: 8px;
+  font-size: 14px;
+
+  z-index: 20;
+}
+
+/* Hotbar */
+
+#hotbar {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 5px;
+
+  padding: 6px;
+
+  background: rgba(30, 30, 30, 0.8);
+  border: 3px solid #111;
+  border-radius: 8px;
+
+  z-index: 20;
+}
+
+.slot {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 28px;
+
+  background: #777;
+  border: 3px solid #333;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.slot.selected {
+  border-color: white;
+  background: #999;
+}
+
+.slot:hover {
+  background: #aaa;
+}
